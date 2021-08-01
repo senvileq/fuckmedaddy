@@ -47,17 +47,6 @@ w:Section("Items")
 
 local t = w:Toggle('Auto Collect Arrows', {flag = "Arrows"})
 
-items:Toggle("Arrows",function(bool)
-while bool == true do
-   wait(0.25)
-    for _, item in pairs(game.Workspace:GetDescendants()) do
-    if item.Name == "Stand Arrow" then
-        fireclickdetector(item.ClickDetector)
-    end
-  end
-   end
-end)
-
 w:Section("made by senvil#1000")
 
 
