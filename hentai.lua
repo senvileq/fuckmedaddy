@@ -2,6 +2,10 @@ local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloo
 
 local w = library:CreateWindow("Crusaders' Heaven Gui")
 
+local functions = w:CreateFolder("Functions")
+local items = w:CreateFolder("Items")
+local credits = w:CreateFolder("Credits")
+
 local me = game.Players.LocalPlayer
  
 --vals
@@ -34,13 +38,21 @@ end
 end
 end
 
-w:Label("made by senvil#1505",{
+functions:Button("Remove your current stand and use an arrow",function()
+    using = true
+    use()
+end)
+
+items:Label("soon xd!!",{
 TextSize = 25;
 TextColor = Color3.fromRGB(255,255,255);
 BgColor = Color3.fromRGB(69,69,69);
 })
 
-w:Button("Remove your current stand and use an arrow",function()
-    using = true
-    use()
-end)
+
+credits:Label("made by senvil#1505",{
+TextSize = 25;
+TextColor = Color3.fromRGB(255,255,255);
+BgColor = Color3.fromRGB(69,69,69);
+})
+
