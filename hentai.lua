@@ -38,7 +38,7 @@ end
 end
 end
 
-functions:Button("Remove your current stand and use an arrow",function()
+functions:Button("Stand Switcher",function()
     using = true
     use()
 end)
@@ -51,7 +51,7 @@ BgColor = Color3.fromRGB(69,69,69);
 
 
 credits:Label("made by senvil#1505",{
-TextSize = 25;
+TextSize = 10;
 TextColor = Color3.fromRGB(255,255,255);
 BgColor = Color3.fromRGB(69,69,69);
 })
