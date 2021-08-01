@@ -10,7 +10,6 @@ local me = game.Players.LocalPlayer
  
 --vals
 local using = false
-local collectArrow = false
 
 function use()
 local arrow = game.Workspace:FindFirstChild("Stand Arrow")
@@ -51,10 +50,13 @@ BgColor = Color3.fromRGB(69,69,69);
 })
 
 items:Toggle("Arrows",function(bool)
-    if bool == true then
-   collectArrow = true
-    elseif bool == false then
-   collectArrow = false
+while bool == true do
+   wait(0.25)
+    for _, item in pairs(game.Workspace:GetDescendants()) do
+    if item.Name == "Stand Arrow" then
+        fireclickdetector(item.ClickDetector)
+    end
+  end
    end
 end)
 
@@ -70,14 +72,3 @@ TextSize = 10;
 TextColor = Color3.fromRGB(255,255,255);
 BgColor = Color3.fromRGB(69,69,69);
 })
-
- while true do
-wait()
-if collectArrow == true then
- for _, item in pairs(game.Workspace:GetDescendants()) do
-    if item.Name == "Stand Arrow" then
-        fireclickdetector(item.ClickDetector)
-    end
-  end
- end
-end
