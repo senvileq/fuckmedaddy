@@ -65,9 +65,9 @@ TextColor = Color3.fromRGB(255,255,255);
 BgColor = Color3.fromRGB(69,69,69);
 })
 
-if items.flags.AutoArrow then
  while true do
-      wait()
+wait()
+if items.flags.AutoArrow then
  for _, item in pairs(game.Workspace:GetDescendants()) do
     if item.Name == "Stand Arrow" then
         fireclickdetector(item.ClickDetector)
