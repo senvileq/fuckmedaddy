@@ -50,7 +50,13 @@ TextColor = Color3.fromRGB(255,255,255);
 BgColor = Color3.fromRGB(69,69,69);
 })
 
-items:Toggle("Arrows", {flag = "AutoArrow"}))
+items:Toggle("Arrows",function(bool)
+    if bool == true then
+   collectArrow = true
+    elseif bool == false then
+   collectArrow = false
+   end
+end)
 
 items:Label("soon xd!!",{
 TextSize = 15;
@@ -67,11 +73,11 @@ BgColor = Color3.fromRGB(69,69,69);
 
  while true do
 wait()
-if items.flags.AutoArrow then
+if collectArrow == true then
  for _, item in pairs(game.Workspace:GetDescendants()) do
     if item.Name == "Stand Arrow" then
         fireclickdetector(item.ClickDetector)
     end
-end
   end
  end
+end
