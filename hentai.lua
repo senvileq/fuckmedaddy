@@ -37,9 +37,9 @@ end
 end
 
 b:Label("Crusaders' Heaven GUI",{
-TextSize = 25
-TextColor = Color3.fromRGB(255,255,255)
-BgColor = Colo3.fromRGB(69,69,69)
+TextSize = 25;
+TextColor = Color3.fromRGB(255,255,255);
+BgColor = Colo3.fromRGB(69,69,69);
 })
 
 b:Button("Remove your current stand and use an arrow",function()
