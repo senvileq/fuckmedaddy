@@ -1,8 +1,6 @@
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
 
-local w = library:CreateWindow("A")
-
-local b = w:CreateFolder("B") 
+local w = library:CreateWindow("Crusaders' Heaven Gui")
 
 local me = game.Players.LocalPlayer
  
@@ -36,13 +34,13 @@ end
 end
 end
 
-b:Label("Crusaders' Heaven GUI",{
+w:Label("made by senvil#1505",{
 TextSize = 25;
 TextColor = Color3.fromRGB(255,255,255);
-BgColor = Colo3.fromRGB(69,69,69);
+BgColor = Color3.fromRGB(69,69,69);
 })
 
-b:Button("Remove your current stand and use an arrow",function()
+w:Button("Remove your current stand and use an arrow",function()
     using = true
     use()
 end)
