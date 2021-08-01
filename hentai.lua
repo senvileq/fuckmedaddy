@@ -1,10 +1,6 @@
-local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/eWKgbdix", true))()
 
 local w = library:CreateWindow("Crusaders' Heaven Gui")
-
-local functions = w:CreateFolder("Functions")
-local items = w:CreateFolder("Items")
-local credits = w:CreateFolder("Credits")
 
 local me = game.Players.LocalPlayer
  
@@ -38,16 +34,18 @@ end
 end
 end
 
-functions:Button("Stand Switcher",function()
-    using = true
-    use()
+w:Section("Functions")
+local b = w:Button("Stand Switcher", function()
+  if using == true then return end
+   using = false
+   use()
 end)
 
-items:Label("Auto Collect",{
-TextSize = 15;
-TextColor = Color3.fromRGB(255,255,255);
-BgColor = Color3.fromRGB(69,69,69);
-})
+
+
+w:Section("Items")
+
+local t = w:Toggle('Auto Collect Arrows', {flag = "Arrows"})
 
 items:Toggle("Arrows",function(bool)
 while bool == true do
@@ -60,15 +58,17 @@ while bool == true do
    end
 end)
 
-items:Label("soon xd!!",{
-TextSize = 15;
-TextColor = Color3.fromRGB(255,255,255);
-BgColor = Color3.fromRGB(69,69,69);
-})
+w:Section("made by senvil#1000")
 
 
-credits:Label("made by senvil#1505",{
-TextSize = 10;
-TextColor = Color3.fromRGB(255,255,255);
-BgColor = Color3.fromRGB(69,69,69);
-})
+spawn(function() 
+        while wait(0.25) do
+            if w.flags.Arrows then
+                    for _, item in pairs(game.Workspace:GetDescendants()) do
+                      if item.Name == "Stand Arrow" then
+                     fireclickdetector(item.ClickDetector)
+                   end
+                end
+            end
+        end
+    end)
