@@ -10,6 +10,7 @@ local me = game.Players.LocalPlayer
  
 --vals
 local using = false
+local collectArrow = false
 
 function use()
 local arrow = game.Workspace:FindFirstChild("Stand Arrow")
@@ -43,8 +44,16 @@ functions:Button("Stand Switcher",function()
     use()
 end)
 
+items:Label("Auto Collect",{
+TextSize = 15;
+TextColor = Color3.fromRGB(255,255,255);
+BgColor = Color3.fromRGB(69,69,69);
+})
+
+items:Toggle("Arrows", {flag = "AutoArrow"}))
+
 items:Label("soon xd!!",{
-TextSize = 25;
+TextSize = 15;
 TextColor = Color3.fromRGB(255,255,255);
 BgColor = Color3.fromRGB(69,69,69);
 })
@@ -56,3 +65,13 @@ TextColor = Color3.fromRGB(255,255,255);
 BgColor = Color3.fromRGB(69,69,69);
 })
 
+if items.flags.AutoArrow then
+ while true do
+      wait()
+ for _, item in pairs(game.Workspace:GetDescendants()) do
+    if item.Name == "Stand Arrow" then
+        fireclickdetector(item.ClickDetector)
+    end
+end
+  end
+ end
