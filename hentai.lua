@@ -15,7 +15,7 @@ pooc:FireServer()
   wait(0.25)
 local arr = game:GetService("ReplicatedStorage").ItemEvent.StandArrow
 arr:FireServer()
-wait(5.5)
+wait(6.5)
 local summon = game:GetService("ReplicatedStorage").Stands.Summon
 summon:FireServer()
 using = false
@@ -28,7 +28,7 @@ pooc:FireServer()
  wait(0.25)
 local arr = game:GetService("ReplicatedStorage").ItemEvent.StandArrow
 arr:FireServer()
-wait(5.5)
+wait(6.5)
 local summon = game:GetService("ReplicatedStorage").Stands.Summon
 summon:FireServer()
 using = false
