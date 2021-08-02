@@ -16,6 +16,8 @@ pooc:FireServer()
 local arr = game:GetService("ReplicatedStorage").ItemEvent.StandArrow
 arr:FireServer()
 wait(5)
+local summon = game:GetService("ReplicatedStorage").Stands.Summon
+summon:FireServer()
 using = false
 else
 if arrow then
@@ -27,6 +29,8 @@ pooc:FireServer()
 local arr = game:GetService("ReplicatedStorage").ItemEvent.StandArrow
 arr:FireServer()
 wait(5)
+local summon = game:GetService("ReplicatedStorage").Stands.Summon
+summon:FireServer()
 using = false
 elseif not arrow then
 
